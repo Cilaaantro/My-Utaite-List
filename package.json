@@ -1,0 +1,27 @@
+{
+  "name": "my-utaite-list",
+  "version": "1.0.0",
+  "description": "An utaite version of My Anime List",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cilaaantro/My-Utaite-List.git"
+  },
+  "author": "Hieu Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cilaaantro/My-Utaite-List/issues"
+  },
+  "homepage": "https://github.com/Cilaaantro/My-Utaite-List#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.2"
+  },
+  "devDependencies": {
+    "noderunner": "^0.1.0"
+  }
+}
