@@ -22,7 +22,8 @@
     "express": "^4.21.2",
     "http-status-codes": "^2.3.0",
     "mongoose": "^8.9.2",
-    "my-utaite-list": "file:"
+    "my-utaite-list": "file:",
+    "pinata-web3": "^0.5.4"
   },
   "devDependencies": {
     "jsdom": "^25.0.1",

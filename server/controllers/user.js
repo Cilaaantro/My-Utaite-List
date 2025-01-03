@@ -20,11 +20,16 @@ const addNewUser=async (req,res)=>{
 const getUser=async(req,res)=>{
   res.status(StatusCodes.OK).json({success:true,user:res.locals.user});
 }
-module.exports={addNewUser,getUser};
 
-const deleteUser=(req,res)=>{
-
+const deleteUser=async (req,res)=>{
+  const {id}=req.body;
+  await User.deleteUser(id);
+  res.status(StatusCodes.OK).json({success:true,message:'User was successfuly deleted'});
 }
 const setUsername=(req,res)=>{
+  const {username}=req.body;
+  res.locals.user.setName(username);
+  res.status(StatusCodes.OK).json({sucess:true,message:'Name change was sucessful'});
   
 }
+module.exports={addNewUser,getUser,deleteUser,setUsername};

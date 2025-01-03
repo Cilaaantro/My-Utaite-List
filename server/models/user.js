@@ -36,8 +36,14 @@ userSchema.statics.createNewUser=async function (email,username,password){
   return await this.create({email:email,username:username,password:password});
 };
 userSchema.statics.getUserByEmail=async function(email){
-  return (await this.find({email:'davisdinhrulez@gmail.com'}))[0];
+  return (await this.find({email:email}))[0];
 }
-
+userSchema.statics.deleteUser=async function(id){
+  return await this.findByIdAndDelete(id);
+}
+userSchema.methods.setName=async function(newUserName){
+  this.username=newUserName;
+  await this.save();
+}
 
 module.exports=mongoose.model('User',userSchema);
